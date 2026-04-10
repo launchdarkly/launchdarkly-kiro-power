@@ -1,11 +1,12 @@
 {
   "mcpServers": {
-    "LaunchDarkly": {
-      "command": "npx",
-      "args": [
-        "-y", "--package", "@launchdarkly/mcp-server", "--", "mcp", "start",
-        "--api-key", "api-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-      ]
+    "LaunchDarkly Feature Management": {
+      "type": "http",
+      "url": "https://mcp.launchdarkly.com/mcp/fm"
+    },
+    "LaunchDarkly AI Configs": {
+      "type": "http",
+      "url": "https://mcp.launchdarkly.com/mcp/aiconfigs"
     }
   }
 }
