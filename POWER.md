@@ -56,7 +56,7 @@ LaunchDarkly provides two hosted MCP servers:
 | Server | URL | Purpose |
 |---|---|---|
 | Feature management | `https://mcp.launchdarkly.com/mcp/fm` | Manage feature flags |
-| AI Configs | `https://mcp.launchdarkly.com/mcp/aiconfigs` | Manage AI Configs and variations |
+| AI Configs | `https://mcp.launchdarkly.com/mcp?toolsets=agent-control` | Manage AI Configs and variations |
 
 If the user needs setup assistance, guide them to add the following to their `.kiro/settings/mcp.json` (or `~/.kiro/settings/mcp.json` for user-level config):
 
@@ -69,7 +69,7 @@ If the user needs setup assistance, guide them to add the following to their `.k
     },
     "LaunchDarkly AI Configs": {
       "type": "http",
-      "url": "https://mcp.launchdarkly.com/mcp/aiconfigs"
+      "url": "https://mcp.launchdarkly.com/mcp?toolsets=agent-control"
     }
   }
 }
@@ -162,7 +162,7 @@ When you encounter MCP server connection errors:
 **How to guide users**:
 
 1. **Re-authorization**: Guide the user to disconnect and reconnect the MCP server in their IDE to re-authorize their LaunchDarkly account via OAuth
-2. **Configuration check**: Ask the user to verify the server URLs are exactly `https://mcp.launchdarkly.com/mcp/fm` and/or `https://mcp.launchdarkly.com/mcp/aiconfigs`
+2. **Configuration check**: Ask the user to verify the server URLs are exactly `https://mcp.launchdarkly.com/mcp/fm` and/or `https://mcp.launchdarkly.com/mcp?toolsets=agent-control`
 3. **Restart**: Suggest restarting Kiro or using the MCP Server view to reconnect
 
 ### Authentication Errors
@@ -255,6 +255,6 @@ Steering workflow that uses the LaunchDarkly MCP server to safely automate featu
 This power integrates with LaunchDarkly's hosted MCP servers.
 
 **Feature management server**: `https://mcp.launchdarkly.com/mcp/fm`
-**AI Configs server**: `https://mcp.launchdarkly.com/mcp/aiconfigs`
+**AI Configs server**: `https://mcp.launchdarkly.com/mcp?toolsets=agent-control`
 
 Authentication is handled via OAuth — no API tokens required.
