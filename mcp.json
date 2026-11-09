@@ -6,7 +6,7 @@
     },
     "LaunchDarkly AI Configs": {
       "type": "http",
-      "url": "https://mcp.launchdarkly.com/mcp/aiconfigs"
+      "url": "https://mcp.launchdarkly.com/mcp?toolsets=agent-control"
     }
   }
 }
